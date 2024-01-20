@@ -7,6 +7,7 @@ import ListItemText from "@mui/material/ListItemText";
 import ListItemIcon from "@mui/material/ListItemIcon";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import Check from "@mui/icons-material/Check";
+import Box from "@mui/material/Box";
 
 function Templates() {
   const [anchorEl, setAnchorEl] = React.useState(null);
@@ -18,8 +19,9 @@ function Templates() {
     setAnchorEl(null);
   };
   return (
-    <div>
+    <Box>
       <Button
+        sx={{ color: "white" }}
         id="basic-button-templates"
         aria-controls={open ? "basic-menu-templates" : undefined}
         aria-haspopup="true"
@@ -65,7 +67,7 @@ function Templates() {
           <ListItemText>Custom spacing...</ListItemText>
         </MenuItem>
       </Menu>
-    </div>
+    </Box>
   );
 }
 
