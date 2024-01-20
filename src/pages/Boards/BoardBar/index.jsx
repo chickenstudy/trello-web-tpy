@@ -8,13 +8,13 @@ import Avatar from "@mui/material/Avatar";
 import AvatarGroup from "@mui/material/AvatarGroup";
 import { PersonAdd } from "@mui/icons-material";
 const MENU_STYLES = {
-  color: "primary.main",
-  backgroundColor: "white",
+  color: "white",
+  bgcolor: "transparent",
   border: "none",
   paddingX: "5px",
   borderRadius: "4px",
-  "& .MuiSvgIcon-root": {
-    color: "primary.main",
+  ".MuiSvgIcon-root": {
+    color: "white",
   },
   "&:hover": {
     bgcolor: "primary.100",
@@ -33,7 +33,9 @@ function BoardBar() {
         justifyContent: "space-between",
         gap: 2,
         overflowX: "auto",
-        borderTop: "1px solid #1bd4bb",
+        bgcolor: (theme) =>
+          theme.palette.mode === "dark" ? "#34495e" : "#1976d2",
+        borderBottom: "1px solid #00bfa5",
       }}
     >
       <Box sx={{ display: "flex", alignItems: "center", gap: 2 }}>
@@ -74,12 +76,28 @@ function BoardBar() {
         />
       </Box>
       <Box sx={{ display: "flex", alignItems: "center", gap: 2 }}>
-        <Button variant="outlined" startIcon={<PersonAdd />}>
+        <Button
+          variant="outlined"
+          startIcon={<PersonAdd />}
+          sx={{
+            color: "white",
+            borderColor: "white",
+            "&:hover": { borderColor: "white" },
+          }}
+        >
           Invite
         </Button>
         <AvatarGroup
-          max={3}
-          sx={{ "& .MuiAvatar-root": { width: 34, height: 34, fontSize: 16 } }}
+          max={5}
+          sx={{
+            gap: "5px",
+            "& .MuiAvatar-root": {
+              width: 34,
+              height: 34,
+              fontSize: 16,
+              border: "none",
+            },
+          }}
         >
           <Tooltip title="TPY">
             <Avatar
