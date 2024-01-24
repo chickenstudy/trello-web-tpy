@@ -34,7 +34,7 @@ function Profiles() {
           <Avatar
             sx={{ width: 36, height: 36 }}
             alt="TPY"
-            src="https://scontent.fhan14-2.fna.fbcdn.net/v/t39.30808-1/358115133_3568240746827154_4644488903831173338_n.jpg?stp=dst-jpg_p240x240&_nc_cat=100&ccb=1-7&_nc_sid=5740b7&_nc_ohc=Sc0tYb84QMcAX_Ylg4X&_nc_ht=scontent.fhan14-2.fna&oh=00_AfCiWgPjEKzvM7a6kkyZBBT38p_X-e61El0vV0wWZrMd7g&oe=65A8085E"
+            src="https://scontent.fhan14-2.fna.fbcdn.net/v/t39.30808-6/358115133_3568240746827154_4644488903831173338_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=efb6e6&_nc_ohc=1W0txrgULIEAX9OPHrR&_nc_ht=scontent.fhan14-2.fna&oh=00_AfBl14WhSUD3w6BeS8-jKXYw8yr2idr4a4uaYamMdivovw&oe=65B485A0"
           />
         </IconButton>
       </Tooltip>
