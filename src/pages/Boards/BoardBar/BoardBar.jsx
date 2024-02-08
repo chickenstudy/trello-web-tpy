@@ -7,6 +7,7 @@ import FilterListIcon from "@mui/icons-material/FilterList";
 import Avatar from "@mui/material/Avatar";
 import AvatarGroup from "@mui/material/AvatarGroup";
 import { PersonAdd } from "@mui/icons-material";
+import { capitalizeFirstLetter } from "~/utils/formatters";
 const MENU_STYLES = {
   color: "white",
   bgcolor: "transparent",
@@ -21,7 +22,7 @@ const MENU_STYLES = {
   },
 };
 
-function BoardBar() {
+function BoardBar({ board }) {
   return (
     <Box
       px={2}
@@ -41,14 +42,14 @@ function BoardBar() {
         <Chip
           sx={MENU_STYLES}
           icon={<DashboardIcon />}
-          label="TPY MERN Stack Board"
+          label={board?.title}
           clickable
           // onClick={() => {}}
         />
         <Chip
           sx={MENU_STYLES}
           icon={<VpnLockIcon />}
-          label="Public/Private Workspace"
+          label={capitalizeFirstLetter(board?.type)}
           clickable
           // onClick={() => {}}
         />
